@@ -1,0 +1,25 @@
+{
+  "name": "systemic-filewatcher",
+  "version": "1.0.0",
+  "description": "A systemic file watcher.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Adron/systemic-filewatcher.git"
+  },
+  "keywords": [
+    "file",
+    "watcher",
+    "filewatcher",
+    "systemic"
+  ],
+  "author": "Adron Hall",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Adron/systemic-filewatcher/issues"
+  },
+  "homepage": "https://github.com/Adron/systemic-filewatcher#readme"
+}
