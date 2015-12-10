@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/Adron/systemic-filewatcher/issues"
   },
-  "homepage": "https://github.com/Adron/systemic-filewatcher#readme"
+  "homepage": "https://github.com/Adron/systemic-filewatcher#readme",
+  "dependencies": {
+    "chokidar": "^1.4.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13"
+  }
 }
