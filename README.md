@@ -1,5 +1,8 @@
 # Systemic File Watcher
 
+[![Build Status](https://travis-ci.org/Adron/systemic-watcher.svg?branch=master)](https://travis-ci.org/Adron/systemic-watcher)
+
+
 Systemic file watcher for managing inbound files.
 
 Features:  (Rough draft of features)
