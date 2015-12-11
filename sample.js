@@ -27,4 +27,3 @@ var options = {
 var watcher = chokidar.watch(pathToWatch, options).on('all', (event, path) => {
   console.log(event, path);
 });
-
