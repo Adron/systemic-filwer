@@ -1,11 +1,12 @@
 /**
- * Created by Adron on 12/10/15.
+ * Created by Adron on 12/11/15.
+ * Description: Working sample code that is implemented.
  */
 "use strict";
-
 var chokidar = require('chokidar');
 
-var pathToWatch = "../FTP-Backup-Drive/process/.";
+// Parameters
+var pathToWatch = "../../FTP-Backup-Drive/process/.";
 var log = console.log.bind(console);
 var options = {
   persistent: true,
@@ -26,14 +27,11 @@ var options = {
   atomic: true
 };
 
-var watcher = chokidar.watch(pathToWatch, options).on('all', eventDefault).on('add', function (path) {
-  return log('Extra event message for $path');
-}).on('change', function (path) {
-  return log('Blargh');
-});
+var watcher = chokidar.watch(pathToWatch, options)
+  .on('all', eventDefault)
+  .on('add', path => log('Extra event message for $path'))
+  .on('change', path => log('Blargh'));
 
-function eventDefault(event, path) {
+function eventDefault(event, path){
   log(event, path);
 }
-
-//# sourceMappingURL=sample-complex-compiled.js.map

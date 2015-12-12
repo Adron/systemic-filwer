@@ -4,8 +4,7 @@
 "use strict";
 var chokidar = require('chokidar');
 
-var pathToWatch = "../FTP-Backup-Drive/process/.";
-var log = console.log.bind(console);
+var pathToWatch = "../../FTP-Backup-Drive/process/.";
 var options = {
   persistent: true,
   //ignored: '*.txt',
@@ -25,11 +24,6 @@ var options = {
   atomic: true
 };
 
-var watcher = chokidar.watch(pathToWatch, options)
-  .on('all', eventDefault)
-  .on('add', path => log('Extra event message for $path'))
-  .on('change', path => log('Blargh'));
-
-function eventDefault(event, path){
-    log(event, path);
-}
+var watcher = chokidar.watch(pathToWatch, options).on('all', (event, path) => {
+  console.log(event, path);
+});

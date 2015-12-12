@@ -2,9 +2,10 @@
  * Created by Adron on 12/10/15.
  */
 "use strict";
+
 var chokidar = require('chokidar');
 
-var pathToWatch = "../FTP-Backup-Drive/process/.";
+var pathToWatch = "../../FTP-Backup-Drive/process/.";
 var options = {
   persistent: true,
   //ignored: '*.txt',
@@ -24,6 +25,8 @@ var options = {
   atomic: true
 };
 
-var watcher = chokidar.watch(pathToWatch, options).on('all', (event, path) => {
+var watcher = chokidar.watch(pathToWatch, options).on('all', function (event, path) {
   console.log(event, path);
 });
+
+//# sourceMappingURL=sample-compiled.js.map
