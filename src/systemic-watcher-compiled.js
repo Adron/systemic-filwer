@@ -5,7 +5,22 @@
 "use strict";
 
 var systemic_watcher = {};
-var chokidar = require('chokidar');
+var chokidar = require("chokidar");
+var systemic_options = require("../options.json").systemic_watcher;
+
+var watchOptions = systemic_options.watch_options;
+var pathToWatch = systemic_options.watch_path;
+var log = console.log.bind(console);
+
+var watcher = chokidar.watch(pathToWatch, options).on('all', eventDefault).on('add', function (path) {
+  return log('Extra event message for $path');
+}).on('change', function (path) {
+  return log('Blargh');
+});
+
+function eventDefault(event, path) {
+  log(event, path);
+}
 
 module.exports = systemic_watcher;
 
