@@ -26,14 +26,14 @@ var options = {
   atomic: true
 };
 
+function eventDefault(event, path) {
+  log(event, path);
+}
+
 var watcher = chokidar.watch(pathToWatch, options).on('all', eventDefault).on('add', function (path) {
   return log('Extra event message for $path');
 }).on('change', function (path) {
   return log('Blargh');
 });
-
-function eventDefault(event, path) {
-  log(event, path);
-}
 
 //# sourceMappingURL=sample-complex-compiled.js.map

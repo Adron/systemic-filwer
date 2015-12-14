@@ -10,8 +10,14 @@ var systemic_options = require("../options.json").systemic_watcher;
 
 var watchOptions = systemic_options.watch_options;
 var pathToWatch = systemic_options.watch_path;
-var log = console.log.bind(console);
+var logFile = systemic_options.watch_log;
 
+var log = function(appendData){
+  console.log(appendData);
+  fs.appendFile(logFile, appendData, function() {
+    console.log("Wrote: " + appendData);
+  });
+}
 
 var watcher = chokidar.watch(pathToWatch, options)
   .on('all', eventDefault)
@@ -19,7 +25,7 @@ var watcher = chokidar.watch(pathToWatch, options)
   .on('change', path => log('Blargh'));
 
 function eventDefault(event, path) {
-  log(event, path);
+  log("Event: " + event + " Path: " + path);
 }
 
 

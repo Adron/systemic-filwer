@@ -1,6 +1,9 @@
 {
   "systemic_watcher": {
-    "watch_path": "../FTP-Backup-Drive/process/.",
+    "watch_path": "../FTP-Backup-Drive/process/",
+    "watch_items": ".",
+    "watch_log": "./filewatcher.log",
+
     "watch_options": {
       "persistent": "true",
       "cwd": ".",
