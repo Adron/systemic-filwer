@@ -19,12 +19,6 @@ var log = function log(appendData) {
   });
 };
 
-var watcher = chokidar.watch(pathToWatch, options).on('all', eventDefault).on('add', function (path) {
-  return log('Extra event message for $path');
-}).on('change', function (path) {
-  return log('Blargh');
-});
-
 function eventDefault(event, path) {
   log("Event: " + event + " Path: " + path);
 }

@@ -19,15 +19,8 @@ var log = function(appendData){
   });
 }
 
-var watcher = chokidar.watch(pathToWatch, options)
-  .on('all', eventDefault)
-  .on('add', path => log('Extra event message for $path'))
-  .on('change', path => log('Blargh'));
-
 function eventDefault(event, path) {
   log("Event: " + event + " Path: " + path);
 }
-
-
 
 module.exports = systemic_watcher;
