@@ -1,0 +1,23 @@
+{
+  "systemic_watcher": {
+    "watch_path": "../FTP-Backup-Drive/process/",
+    "watch_items": ".",
+    "watch_log": "./filewatcher.log",
+
+    "watch_options": {
+      "persistent": "true",
+      "cwd": ".",
+      "usePolling": "true",
+      "interval": "100",
+      "binaryInterval": "300",
+      "alwaysStat": "false",
+      "depth": "99",
+      "awaitWriteFinish": {
+        "stabilityThreshold": "2000",
+        "pollInterval": "100"
+      },
+      "ignorePermissionErrors": "false",
+      "atomic": "true"
+    }
+  }
+}
