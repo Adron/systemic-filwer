@@ -1,1 +1,1 @@
-{"version":3,"sources":["index.js"],"names":[],"mappings":"","file":"index-compiled.js","sourcesContent":["/**\n * Created by Adron on 12/10/15.\n * Description: File watcher initiates based on config file.\n */\n\n"]}
+{"version":3,"sources":["index.js"],"names":[],"mappings":";;;;;;;AAKA,IAAI,gBAAgB,GAAG,EAAE,CAAC;;AAG1B,MAAM,CAAC,OAAO,GAAG,gBAAgB,CAAC","file":"index-compiled.js","sourcesContent":["/**\n * Created by Adron on 12/10/15.\n * Description: File watcher initiates based on config file.\n */\n\nvar systemic_watcher = {};\n\n\nmodule.exports = systemic_watcher;"]}
