@@ -12,6 +12,7 @@ var systemic_options = require("../options.json").systemic_watcher;
 var options = systemic_options.watch_options;
 var pathToWatch = systemic_options.watch_path;
 var logFile = systemic_options.watch_log;
+var watch_file = systemic_options.watch_file;
 var watcher;
 
 var loggit = function loggit(appendData) {
@@ -22,11 +23,7 @@ var loggit = function loggit(appendData) {
 };
 
 systemic_watcher.watch = function () {
-  watcher = chokidar.watch(pathToWatch, options).on('all', eventDefault).on('add', function (path) {
-    return log('Extra event message for $path');
-  }).on('change', function (path) {
-    return log('Blargh');
-  });
+  watcher = chokidar.watch(pathToWatch, options).on("all", eventDefault).on("add", eventDefault).on("change", eventDefault).on("unlink", eventDefault).on("addDir", eventDefault).on("unlinkDir", eventDefault).on("ready", eventDefault).on("raw", eventDefault).on("error", eventDefault);
 };
 
 systemic_watcher.watchStop = function () {

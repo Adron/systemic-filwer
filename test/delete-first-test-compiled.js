@@ -38,6 +38,32 @@ describe("When using the file watcher", function () {
       fs.rmdirSync(pathTest);
       done();
     });
+
+    it("should trigger upon all file & directory actions.", function (done) {
+      // Add test to verify .on("all", eventDefault)
+      should.exist(failall);
+      done();
+    });
+
+    it("should trigger upon add file & directory actions.", function (done) {
+      // Add test to verify .on("add", eventDefault)
+      should.exist(failadd);
+      done();
+    });
+
+    it("should trigger upon change file & directory actions.", function (done) {
+      // Add test to verify .on("change", eventDefault)
+      should.exist(failchange);
+      done();
+    });
+
+    it("should trigger upon unlink/delete file & directory actions.", function (done) {
+      // Add test to verify .on("unlink", eventDefault)
+      should.exist(failunlink);
+      done();
+    });
+
+    // TODO: Finish others.
   });
 
   after(function () {
