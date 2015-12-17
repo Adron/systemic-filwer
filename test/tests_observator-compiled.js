@@ -7,7 +7,7 @@
 var assert = require('assert');
 var should = require("chai").should();
 var fs = require("fs");
-var systemicWatcherUnderTest = require("../src/systemic-watcher");
+var systemicWatcherUnderTest = require("../src/observator");
 
 var path = "./FTP-Backup-Drive/";
 var file = "dataToImport.dat";
@@ -20,7 +20,7 @@ describe("When using the file watcher", function () {
   before(function () {
     systemicWatcherUnderTest.watch();
     fs.mkdirSync(path);
-    fs.appendFile(fileAndPath);
+    fs.appendFile(fileAndPath, generalData);
   });
 
   describe("a file", function () {
@@ -38,6 +38,32 @@ describe("When using the file watcher", function () {
       fs.rmdirSync(pathTest);
       done();
     });
+
+    //it("should trigger upon all file & directory actions.", function (done) {
+    //  // Add test to verify .on("all", eventDefault)
+    //  should.exist(failall);
+    //  done();
+    //});
+
+    //it("should trigger upon add file & directory actions.", function (done) {
+    //  // Add test to verify .on("add", eventDefault)
+    //  should.exist(failadd);
+    //  done();
+    //});
+    //
+    //it("should trigger upon change file & directory actions.", function (done) {
+    //  // Add test to verify .on("change", eventDefault)
+    //  should.exist(failchange);
+    //  done();
+    //});
+    //
+    //it("should trigger upon unlink/delete file & directory actions.", function (done) {
+    //  // Add test to verify .on("unlink", eventDefault)
+    //  should.exist(failunlink);
+    //  done();
+    //});
+
+    // TODO: Finish others.
   });
 
   after(function () {
@@ -47,4 +73,4 @@ describe("When using the file watcher", function () {
   });
 });
 
-//# sourceMappingURL=delete-first-test-compiled.js.map
+//# sourceMappingURL=tests_observator-compiled.js.map

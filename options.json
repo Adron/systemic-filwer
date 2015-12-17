@@ -3,7 +3,6 @@
     "watch_path": "../FTP-Backup-Drive/",
     "watch_items": ".",
     "watch_log": "./filewatcher.log",
-
     "watch_options": {
       "persistent": "true",
       "cwd": ".",
