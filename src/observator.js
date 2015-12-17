@@ -4,7 +4,7 @@
  */
 "use strict";
 
-var systemic_watcher = {};
+var observator = {};
 var chokidar = require("chokidar");
 var fs = require("fs");
 var systemic_options = require("../options.json").systemic_watcher;
@@ -12,7 +12,6 @@ var systemic_options = require("../options.json").systemic_watcher;
 var options = systemic_options.watch_options;
 var pathToWatch = systemic_options.watch_path;
 var logFile = systemic_options.watch_log;
-var watch_file = systemic_options.watch_file;
 var watcher;
 
 var loggit = function (appendData) {
@@ -22,30 +21,49 @@ var loggit = function (appendData) {
   });
 };
 
-systemic_watcher.watch = function () {
+observator.watch = function () {
+
+  // Initialize File.
+
   watcher = chokidar.watch(pathToWatch, options)
-    .on("all", eventDefault)
-    .on("add", eventDefault)
-    .on("change", eventDefault)
-    .on("unlink", eventDefault)
-    .on("addDir", eventDefault)
-    .on("unlinkDir", eventDefault)
-    .on("ready", eventDefault)
-    .on("raw", eventDefault)
-    .on("error", eventDefault);
+    .on("all", eventAll)
+    .on("add", eventAll)
+    .on("change", eventAll)
+    .on("unlink", eventAll)
+    .on("addDir", eventAll)
+    .on("unlinkDir", eventAll)
+    .on("ready", eventAll)
+    .on("raw", eventAll)
+    .on("error", eventAll);
 };
 
-systemic_watcher.watchStop = function () {
+observator.watchStop = function () {
   watcher.close();
 };
 
-systemic_watcher.watchPaths = function () {
+observator.watchPaths = function () {
   return watcher.getWatched();
 };
 
-function eventDefault(event, path) {
+function logEventAndPath(event, path) {
   loggit("Event: " + event);
   loggit("Path: " + path);
 }
 
-module.exports = systemic_watcher;
+function eventAll(event, path) {
+  logEventAndPath(event, path);
+}
+
+function eventChange(event, path) {
+  logEventAndPath(event, path);
+}
+
+function eventUnlink(event, path) {
+  logEventAndPath(event, path);
+}
+
+function eventAddDir(event, path) {
+  logEventAndPath(event, path);
+}
+
+module.exports = observator;

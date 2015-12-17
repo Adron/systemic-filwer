@@ -70,7 +70,6 @@ describe("When using the file watcher", function () {
     fs.unlinkSync(fileAndPath);
     fs.rmdirSync(path);
     systemicWatcherUnderTest.watchStop();
-  });
-});
+  })
 
-//# sourceMappingURL=delete-first-test-compiled.js.map
+});

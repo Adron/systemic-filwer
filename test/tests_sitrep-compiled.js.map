@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "tests_sitrep.js"
+  ],
+  "names": [],
+  "mappings": "",
+  "file": "tests_sitrep-compiled.js",
+  "sourcesContent": [
+    "/**\n * Created by ahall on 12/16/15.\n */\n"
+  ]
+}
