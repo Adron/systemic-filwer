@@ -25,6 +25,7 @@ observator.watch = function () {
 
   // Initialize File.
 
+
   watcher = chokidar.watch(pathToWatch, options)
     .on("all", eventAll)
     .on("add", eventAll)
