@@ -7,7 +7,7 @@
 var observator = {};
 var chokidar = require("chokidar");
 var fs = require("fs");
-var systemic_options = require("../options.json").systemic_watcher;
+var systemic_options = require("../configuration/options.json").systemic_watcher;
 
 var options = systemic_options.watch_options;
 var pathToWatch = systemic_options.watch_path;
