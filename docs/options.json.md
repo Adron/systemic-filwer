@@ -1,0 +1,33 @@
+[README.md](../README.md)
+
+# options.json Description
+
+*Sample File Contents:*
+
+    {
+      "systemic_watcher": {
+        "watch_path": "../FTP-Backup-Drive/",
+        "watch_items": ".",
+        "watch_log": "./filewatcher.log",
+        "watch_options": {
+          "persistent": "true",
+          "cwd": ".",
+          "usePolling": "true",
+          "interval": "100",
+          "binaryInterval": "300",
+          "alwaysStat": "false",
+          "depth": "99",
+          "awaitWriteFinish": {
+            "stabilityThreshold": "2000",
+            "pollInterval": "100"
+          },
+          "ignorePermissionErrors": "false",
+          "atomic": "true"
+        }
+      }
+    }
+
+* **watch_path** > 
+* **watch_items** > 
+* **watch_log** > 
+* **watch_options** > 
