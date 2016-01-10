@@ -1,6 +1,6 @@
 [![Systemic Filwer](./logo/Systemic-DNA-Code-filwer-256x256.png)](./logo/Systemic-DNA-Code-filwer-256x256.png)
 
-# Systemic Filwer
+# Filwer
 
 [![Build Status](https://travis-ci.org/Adron/systemic-filewatcher.svg?branch=master)](https://travis-ci.org/Adron/systemic-filewatcher)
 
