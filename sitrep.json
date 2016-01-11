@@ -1,10 +1,1 @@
-{
-  "StampedTime": 1450745737300,
-  "StampedDate": 21,
-  "WatcherStat": {
-    "Event": "someevent",
-    "Path": "blagh",
-    "Directory": false,
-    "File": false
-  }
-}
+{"StampedTime":1450764773342,"StampedDate":21,"WatcherStat":{"Event":"someevent","Path":"blagh","Directory":false,"File":false}}
