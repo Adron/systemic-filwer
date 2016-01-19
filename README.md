@@ -2,7 +2,7 @@
 
 # Filwer
 
-[![Build Status](https://travis-ci.org/Adron/systemic-filewatcher.svg?branch=master)](https://travis-ci.org/Adron/systemic-filewatcher)
+[![Build Status](https://travis-ci.org/Adron/systemic-filwer.svg?branch=master)](https://travis-ci.org/Adron/systemic-filwer)
 
 Systemic file watcher for managing inbound files.
 
