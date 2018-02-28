@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Adron/systemic-filewatcher#readme",
   "dependencies": {
-    "chokidar": "^1.4.1",
+    "chokidar": "^2.0.0",
     "jsonfile": "^2.2.3"
   },
   "devDependencies": {
